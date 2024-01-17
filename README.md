@@ -1,1 +1,1 @@
-# レポート３をGitHubにpush
+# レポート３をGitHubのリポジトリにpush
