@@ -33,8 +33,12 @@ public class Enemy {
      * attackに応じて乱数でダメージを算出し、hero.wounded()によりダメージ処理を実行。
      * @param hero 攻撃対象
      */
+    // if文でHPが0以下の場合に攻撃力が０になる．のような処理を行う．
     public void attack(Hero hero){
         int damage = (int)(Math.random() * attack);
+        if (hitPoint <= 0) {
+            damage = 0;
+        }
         System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, hero.name, damage);
         hero.wounded(damage);
     }
