@@ -3,6 +3,8 @@ package jp.ac.uryukyu.ie.e205749;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.checkerframework.checker.units.qual.h;
+
 class EnemyTest {
     /**
      * 倒れたはずの敵は攻撃できないことを検証。
@@ -18,10 +20,13 @@ class EnemyTest {
         Hero demoHero = new Hero("デモ勇者", defaultHeroHp, 100);
         Enemy slime = new Enemy("スライムもどき", 10, 100);
 
-        
+        //int heroHitBPoint = demoHero.getHeroHitPoint();
+   
         demoHero.attack(slime);
         slime.attack(demoHero);
-        assertEquals(defaultHeroHp, demoHero.hitPoint);
+
+        assertEquals(defaultHeroHp, demoHero.getHeroHitPoint());
+
     }
 }
 
