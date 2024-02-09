@@ -1,5 +1,3 @@
-import org.checkerframework.checker.units.qual.h;
-
 import jp.ac.uryukyu.ie.e205749.*;
 
 public class Main {
